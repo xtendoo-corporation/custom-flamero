@@ -1,0 +1,20 @@
+# Copyright 2022 Xtendoo
+
+{
+    "name": "Flamero Webservice",
+    "summary": """
+        Defines webservice for Flamero Hotels""",
+    "version": "15.0.1.0.0",
+    "depends": ["webservice"],
+    "maintainers": ["manuelcalerosolis"],
+    "author": "Xtendoo",
+    "license": "AGPL-3",
+    "data": [
+        "security/ir.model.access.csv",
+        "wizard/webservice_import.xml",
+        "views/webservice_import.xml"
+    ],
+    "installable": True,
+    "auto_install": True,
+}
+

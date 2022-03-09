@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="website_import_view" model="ir.ui.view">
+        <field name="name">Flamero Webservice Import</field>
+        <field name="model">flamero.webservice.import</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <form string="Flamero Webservice Import">
+                <h2>Flamero Webservice Import</h2>
+                <group>
+                    <field name="webservice_backend_id" />
+                </group>
+                <footer>
+                    <button
+                        name="import_file"
+                        string="Import"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="webservice_import_action" model="ir.actions.act_window">
+        <field name="name">Gestool Import</field>
+        <field name="res_model">flamero.webservice.import</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
