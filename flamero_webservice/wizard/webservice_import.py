@@ -2,8 +2,6 @@ import logging
 from base64 import b64decode
 from io import StringIO
 
-import responses
-
 from odoo import _, api, fields, models
 from requests import auth, exceptions
 
@@ -30,12 +28,12 @@ class FlameroWebserviceImport(models.TransientModel):
         print("*"*80)
         self.web_service_get()
 
-    @responses.activate
     def web_service_get(self):
         responses.add(responses.GET, self.webservice_backend_id.url, body="{}")
-        self.webservice_backend_id.call("get")
+        result = self.webservice_backend_id.call("get")
 
         print("*"*80)
+        print("Result:", result)
         print("Responses.calls:", len(responses.calls))
         print("Headers:", responses.calls[0].request.headers)
         data = auth._basic_auth_str(self.webservice_backend_id.username, self.webservice_backend_id.password)

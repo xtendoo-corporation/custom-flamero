@@ -3,7 +3,7 @@
 {
     "name": "Flamero Webservice",
     "summary": """
-        Defines webservice for Flamero Hotels""",
+        Webservice for Flamero Hotels""",
     "version": "15.0.1.0.0",
     "depends": ["webservice"],
     "maintainers": ["manuelcalerosolis"],
@@ -17,4 +17,3 @@
     "installable": True,
     "auto_install": True,
 }
-
