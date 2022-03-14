@@ -29,15 +29,10 @@ class FlameroWebserviceImport(models.TransientModel):
         self.web_service_get()
 
     def web_service_get(self):
-        responses.add(responses.GET, self.webservice_backend_id.url, body="{}")
         result = self.webservice_backend_id.call("get")
 
         print("*"*80)
         print("Result:", result)
-        print("Responses.calls:", len(responses.calls))
-        print("Headers:", responses.calls[0].request.headers)
-        data = auth._basic_auth_str(self.webservice_backend_id.username, self.webservice_backend_id.password)
-        print("Data:", data)
         print("*"*80)
 
 
