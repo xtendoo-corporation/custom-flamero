@@ -8,11 +8,15 @@
             <form string="Importador de XML Flamero">
                 <h2>Selecciona fichero XML a importar</h2>
                 <field
-                    name="data_file_xml"
-                    filename="filename"
-                    placeholder="Choose a file to import..."
+                    name="invoice_file"
+                    filename="invoice_filename"
+                    required="1"
                 />
-                <field name="filename" invisible="1" />
+                <field
+                    name="invoice_filename"
+                    invisible="1"
+                />
+
                 <footer>
                     <button
                         name="import_file"
