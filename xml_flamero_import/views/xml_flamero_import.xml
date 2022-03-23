@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 Darío Cruz - Xtendoo.es
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <menuitem
+        id="flamero_menuitem"
+        name="Flamero"
+        parent="base.menu_custom"
+    />
+
+    <menuitem
+        id="xml_flamero_import_menuitem"
+        name="Importación de Xml"
+        parent="flamero_menuitem"
+        action="xml_flamero_import_action"
+    />
+
+</odoo>
+
+
