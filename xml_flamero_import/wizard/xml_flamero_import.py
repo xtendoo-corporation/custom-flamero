@@ -41,12 +41,32 @@ class XmlFlameroImport(models.TransientModel):
             email = properties[0].xpath("d:E_mail", namespaces={
                 "d": "http://schemas.microsoft.com/ado/2007/08/dataservices"})
             if email is not None:
-                nombre = properties[0].xpath("d:Nombre",
+                mail_contact = self.env["mailing.contact"].search([("email", "=", email[0].text), ])
+
+                if not mail_contact:
+                    nombre = properties[0].xpath("d:Nombre",
                                             namespaces={"d": "http://schemas.microsoft.com/ado/2007/08/dataservices"})
-                print("*"*80)
-                print("email", email[0].text)
-                print("nombre", nombre[0].text)
-                print("*"*80)
+                    apellido_1 = properties[0].xpath("d:Apellido_1",
+                                            namespaces={"d": "http://schemas.microsoft.com/ado/2007/08/dataservices"})
+                    apellido_2 = properties[0].xpath("d:Apellido_2",
+                                            namespaces={"d": "http://schemas.microsoft.com/ado/2007/08/dataservices"})
+                    nombre_completo = nombre[0].text
+
+                    if apellido_1[0].text is not None:
+                        nombre_completo = nombre_completo + " " + apellido_1[0].text
+
+                    if apellido_2[0].text is not None:
+                        nombre_completo = nombre_completo + " " + apellido_2[0].text
+
+                    self.env["mailing.contact"].sudo().create({
+                        'email': email[0].text,
+                        'name': nombre_completo,
+                        'company_name': nombre_completo,
+                    })
+                else:
+                    print("*" * 80)
+                    print("Email " + email[0].text + " ya pertenece a la base de datos.")
+                    print("*" * 80)
 
     def import_file(self):
         self.ensure_one()
