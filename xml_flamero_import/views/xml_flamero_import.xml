@@ -3,9 +3,9 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
     <menuitem
-        id="xml_flamero_import_manuitem"
+        id="xml_flamero_import_menuitem"
         name="Importación Xml Flamero"
-        parent="base.menu_custom"
+        parent="mass_mailing.mass_mailing_configuration"
         action="xml_flamero_import_action"
      />
 </odoo>
