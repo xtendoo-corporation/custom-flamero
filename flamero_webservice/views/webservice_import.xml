@@ -5,14 +5,9 @@
 
 <odoo>
     <menuitem
-        id="flamero_manuitem"
-        name="Flamero"
-        parent="base.menu_custom"
-    />
-    <menuitem
-        id="flamero_webservice_manuitem"
+        id="flamero_webservice_menuitem"
         name="Flamero webservice"
-        parent="flamero_manuitem"
+        parent="mass_mailing.mass_mailing_configuration"
         action="webservice_import_action"
     />
 </odoo>

@@ -5,7 +5,7 @@
     "summary": """
         Webservice for Flamero Hotels""",
     "version": "15.0.1.0.0",
-    "depends": ["webservice"],
+    "depends": ["mass_mailing", "webservice"],
     "maintainers": ["manuelcalerosolis"],
     "author": "Xtendoo",
     "license": "AGPL-3",
@@ -14,6 +14,7 @@
         "wizard/webservice_import.xml",
         "views/webservice_import.xml"
     ],
+    "application": True,
     "installable": True,
     "auto_install": True,
 }
