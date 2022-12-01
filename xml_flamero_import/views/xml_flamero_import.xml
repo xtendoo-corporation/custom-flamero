@@ -4,7 +4,7 @@
 <odoo>
     <menuitem
         id="xml_flamero_import_menuitem"
-        name="Importación Xml Flamero"
+        name="Importación Flamero"
         parent="mass_mailing.mass_mailing_configuration"
         action="xml_flamero_import_action"
      />

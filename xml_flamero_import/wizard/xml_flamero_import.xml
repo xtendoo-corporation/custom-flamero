@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <odoo>
     <record id="xml_flamero_import_view" model="ir.ui.view">
-        <field name="name">Xml Flamero Import</field>
+        <field name="name">Flamero Import</field>
         <field name="model">xml.flamero.import</field>
         <field name="priority">1</field>
         <field name="arch" type="xml">
-            <form string="Importador de XML Flamero">
-                <h2>Selecciona fichero XML a importar</h2>
+            <form string="Importador de Flamero">
+                <h2>Selecciona fichero a importar</h2>
                 <field
                     name="invoice_file"
                     filename="invoice_filename"
@@ -31,7 +31,7 @@
     </record>
 
     <record id="xml_flamero_import_action" model="ir.actions.act_window">
-        <field name="name">XML Flamero Import</field>
+        <field name="name">Flamero Import</field>
         <field name="res_model">xml.flamero.import</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
