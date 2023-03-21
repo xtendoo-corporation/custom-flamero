@@ -5,7 +5,7 @@
     "summary": """
         Webservice for Flamero Hotels""",
     "version": "15.0.1.0.0",
-    "depends": ["mass_mailing", "webservice"],
+    "depends": ["mass_mailing", "xtendoo_webservice"],
     "maintainers": ["manuelcalerosolis"],
     "author": "Xtendoo",
     "license": "AGPL-3",
