@@ -45,9 +45,6 @@ class XmlFlameroImport(models.TransientModel):
             raise UserError(_("Can not read the file"))
 
         for row in csv_data:
-            print("-------------------------------------------")
-            print("row:", row)
-            print("-------------------------------------------")
 
             email = row[6]
 

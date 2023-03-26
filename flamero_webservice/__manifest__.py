@@ -13,7 +13,6 @@
         "security/ir.model.access.csv",
         "wizard/webservice_import.xml",
         "views/webservice_import.xml",
-        "data/webservice_cron.xml"
     ],
     "application": True,
     "installable": True,
